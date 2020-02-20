@@ -43,6 +43,9 @@ int main(int argc, char **argv) {
 
   // Load mesh
   std::tie(mesh, geometry) = loadMesh(args::get(inputFilename));
+
+  // Uncomment to fix
+  // geometry->requireVertexAngleSums();
   badFn(*geometry);
 
   return EXIT_SUCCESS;
